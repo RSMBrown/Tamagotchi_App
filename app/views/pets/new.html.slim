@@ -1,0 +1,11 @@
+h1
+  | New Tamagotchi
+
+=form_with model: @pet do |f|
+  =f.label :name
+  =f.text_field :name 
+  br 
+  =f.label :type
+  =f.select :pet_type, options_for_select(Pet.pet_types.map { |key, value| [key.titleize, Pet.pet_types.key(value)]})
+  br 
+  =f.submit

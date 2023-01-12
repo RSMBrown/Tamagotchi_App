@@ -1,0 +1,7 @@
+h1
+  | Tamagotchi
+
+-@pets.each do |pet|
+  =link_to pet.name, pet
+
+=link_to "New Tamagotchi", new_pet_path
